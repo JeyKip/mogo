@@ -1,0 +1,11 @@
+@base-rem-px: 16;
+@base-em-px: 16;
+
+.px-to-rem(@property, @px) {
+    @remValue: @px / @base-rem-px;
+    @{property}: ~"@{remValue}rem";
+}
+
+.max-width-rem(@px) {
+    .px-to-rem(max-width, @px);
+}

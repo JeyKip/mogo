@@ -1,3 +1,7 @@
+// include mixins
+@import url('../blocks/mixins/converters.less');
+@import url('../blocks/mixins/fonts.less');
+
 // include normalize.css before any other styles
 @import (less) url('../../node_modules/normalize.css/normalize.css');
 
@@ -9,29 +13,4 @@
 @import url('../blocks/fonts/kaushan-script.less');
 
 // include page specific styles
-.h1-1 {
-    font-family: 'Kaushan Script', cursive;
-    font-weight: normal;
-    font-style: normal;
-}
-
-.h1-2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-}
-
-.h1-3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: normal;
-}
-
-.h1-4 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    font-style: italic;
-}
-
-.h1-5 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: normal;
-}
+@import url('../blocks/centered-content/centered-content.less');
