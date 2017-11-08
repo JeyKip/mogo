@@ -1,0 +1,85 @@
+.slider {
+    // in original design number font-size = 24, text font-size = 18
+    @slider-number-factor: 24 / 18;
+    @slider-text-fs-xs: 14;
+    @slider-text-fs-s: 15;
+    @slider-text-fs-m: 16;
+    @slider-text-fs-l: 18;
+
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+
+    &__item {
+        position: relative;
+        display: block;
+        cursor: pointer;
+
+        @media screen and (min-width: 768px) {
+            &::before,
+            &::after {
+                .height-rem(3);
+                
+                content: '';
+                display: block;
+                position: absolute;
+                top: -1.5em;
+            }
+
+            &::before {
+                left: 0;
+                width: 100%;
+                background-color: #ffffff;
+                opacity: .5;
+            }
+
+            &::after {
+                right: 0;
+                width: 25%;
+                background-color: #f38181;
+                opacity: 0;
+            }
+
+            &:hover::before,
+            &:hover::after {
+                opacity: 1;
+                transition: all .2s ease-in-out;
+            }
+
+            &:hover::after {
+                opacity: 1;
+                transform: translateX(-300%);
+            }
+        }
+    }
+
+    &__link {
+        .font-size-em(@slider-text-fs-xs);
+
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #ffffff;
+        white-space: nowrap;
+
+        @media screen and (min-width: 768px) {
+            .font-size-em(@slider-text-fs-s);
+        }
+
+        @media screen and (min-width: 1024px) {
+            .font-size-em(@slider-text-fs-m);
+        }
+
+        @media screen and (min-width: 1200px) {
+            .font-size-em(@slider-text-fs-l);
+        }
+    }
+
+    &__number {
+        .montserrat-bold();
+        font-size: ~"@{slider-number-factor}em";
+    }
+
+    &__text {
+        .montserrat-normal();
+    }
+}

@@ -10,33 +10,62 @@
 </head>
 <body class="page">
     <header class="header page__header">
-        <div class="centered-content">
-            <div class="navigation">
-                <a class="logo" href=".">
-                    <span class="logo__text">MoGo</span>
-                </a>
-                <nav class="menu">
-                    <ul class="menu__list">
+        <div class="header__navigation-placeholder">
+            <div class="header__navigation-container">
+                <div class="header__navigation">
+                    <a class="header__logo" href=".">MoGo</a>
+                    <div class="btn-burger header__burger" data-toggle="#main-menu">
+                        <span class="btn-burger__top-line"></span>
+                        <span class="btn-burger__middle-line"></span>
+                        <span class="btn-burger__bottom-line"></span>
+                    </div>
+                </div>
+                <nav class="menu header__menu" id="main-menu">
+                    <ul class="menu__items">
                         <li class="menu__item"><a href="#about" class="menu__link">About</a></li>
-                        <li class="menu__item"><a href="#service" class="menu__link">Service</a></li>
+                        <li class="menu__item"><a href="#skills" class="menu__link">Service</a></li>
                         <li class="menu__item"><a href="#works" class="menu__link">Work</a></li>
                         <li class="menu__item"><a href="#blog" class="menu__link">Blog</a></li>
                         <li class="menu__item"><a href="#contact" class="menu__link">Contact</a></li>
-                        <li class="menu__item"><a href="#shopping-cart" class="menu__link">Shopping Cart</a></li>
-                        <li class="menu__item"><a href="#search" class="menu__link">Search</a></li>
+                        <li class="menu__item"><a href="#shopping-cart" class="menu__link menu__link_icon_magnifying-glass">Shopping Cart</a></li>
+                        <li class="menu__item"><a href="#search" class="menu__link menu__link_icon_shopping-cart">Search</a></li>
                     </ul>
                 </nav>
             </div>
+        </div>
+        <div class="header__content">
             <h1 class="caption header__caption">
                 <small class="caption__subtitle">Creative Template</small>
                 Welcome To Mogo
             </h1>
-            <button type="button" class="button button_theme_transparent">Learn More</button>
+            <button type="button" class="button">Learn More</button>
+        </div>
+        <div class="centered-content">
             <ul class="slider header__slider">
-                <li class="slider__item"><a class="slider__link">Intro</a></li>
-                <li class="slider__item"><a class="slider__link">Work</a></li>
-                <li class="slider__item"><a class="slider__link">About</a></li>
-                <li class="slider__item"><a class="slider__link">Contacts</a></li>
+                <li class="slider__item">
+                    <a class="slider__link">
+                        <span class="slider__number">01</span>
+                        <span class="slider__text">Intro</span>
+                    </a>
+                </li>
+                <li class="slider__item">
+                    <a class="slider__link">
+                        <span class="slider__number">02</span>
+                        <span class="slider__text">Work</span>
+                    </a>
+                </li>
+                <li class="slider__item">
+                    <a class="slider__link">
+                        <span class="slider__number">03</span>
+                        <span class="slider__text">About</span>
+                    </a>
+                </li>
+                <li class="slider__item">
+                    <a class="slider__link">
+                        <span class="slider__number">04</span>
+                        <span class="slider__text">Contacts</span>
+                    </a>
+                </li>
             </ul>
         </div>
     </header>
@@ -76,7 +105,7 @@
                 </ul>
             </div>
         </div>
-        <ul class="statistics">
+        <ul class="statistics centered-content">
             <li class="statistics__item">
                 <span class="statistics__amount">42</span>
                 <span class="statistics__comment">Web Design Projects</span>
@@ -148,71 +177,71 @@
             </h2>
         </div>
     </section>
-    <section class="skills centered-content">
+    <section class="skills" id="skills">
         <div class="centered-content">
             <h2 class="caption">
                 <small class="caption__subtitle">Service</small>
                 What We Do
             </h2>
-        </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <div class="skills__main-content">
-            <div class="skills__image-container">
-                <img src="styles/img/skills/skills-image.png" alt="Skills Image" class="skills__image">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="skills__main-content">
+                <div class="skills__image-container">
+                    <!-- <img src="styles/img/skills/skills-image.png" alt="Skills Image" class="skills__image"> -->
+                </div>
+                <div class="skills__list-container">
+                    <ul class="accordion-list">
+                        <li class="accordion-list__item">
+                            <div class="skill">
+                                <div class="skill__header">
+                                    <i class="skill__icon skill__icon_image_photography"></i>
+                                    <span class="skill__title">Photography</span>
+                                </div>
+                                <div class="skill__description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="accordion-list__item">
+                            <div class="skill">
+                                <div class="skill__header">
+                                    <i class="skill__icon skill__icon_image_creativity"></i>
+                                    <span class="skill__title">Creativity</span>
+                                </div>
+                                <div class="skill__description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="accordion-list__item">
+                            <div class="skill">
+                                <div class="skill__header">
+                                    <i class="skill__icon skill__icon_image_web-design"></i>
+                                    <span class="skill__title">Web Design</span>
+                                </div>
+                                <div class="skill__description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="skills__list-container">
-                <ul class="accordion-list">
-                    <li class="accordion-list__item">
-                        <div class="skill">
-                            <div class="skill__header">
-                                <i class="skill__icon skill__icon_image_photography"></i>
-                                <span class="skill__title">Photography</span>
-                            </div>
-                            <div class="skill__description">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="accordion-list__item">
-                        <div class="skill">
-                            <div class="skill__header">
-                                <i class="skill__icon skill__icon_image_creativity"></i>
-                                <span class="skill__title">Creativity</span>
-                            </div>
-                            <div class="skill__description">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="accordion-list__item">
-                        <div class="skill">
-                            <div class="skill__header">
-                                <i class="skill__icon skill__icon_image_web-design"></i>
-                                <span class="skill__title">Web Design</span>
-                            </div>
-                            <div class="skill__description">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                </p>
-                            </div>
-                        </div>
+            <div class="skills__testimonials">
+                <ul class="testimonials-list centered-content">
+                    <li class="testimonials-list__item">
+                        <blockquote class="testimonial">
+                            <p class="testimonial__comment">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+                            <cite class="testimonial__author">Jon Doe</cite>
+                        </blockquote>
                     </li>
                 </ul>
             </div>
-        </div>
-        <div class="skills__testimonials">
-            <ul class="testimonials-list centered-content">
-                <li class="testimonials-list__item">
-                    <blockquote class="testimonial">
-                        <p class="testimonial__comment">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
-                        <cite class="testimonial__author">Jon Doe</cite>
-                    </blockquote>
-                </li>
-            </ul>
         </div>
     </section>
     <section class="our-team">
@@ -234,21 +263,21 @@
                 <ul class="tabs">
                     <li class="tabs__item employee-card">
                         <a href="#team-member-1" class="image-link employee-card__photo">
-                            <img src="styles/img/image-link/team-member-1.png" alt="Team Member 1 Image" class="image-link__image">
+                            <!-- <img src="styles/img/image-link/team-member-1.png" alt="Team Member 1 Image" class="image-link__image"> -->
                         </a>
                         <span class="employee-card__name">Matthew Dix</span>
                         <span class="employee-card__position">Graphic Design</span>
                     </li>
                     <li class="tabs__item employee-card">
                         <a href="#team-member-2" class="image-link employee-card__photo">
-                            <img src="styles/img/image-link/team-member-2.png" alt="Team Member 2 Image" class="image-link__image">
+                            <!-- <img src="styles/img/image-link/team-member-2.png" alt="Team Member 2 Image" class="image-link__image"> -->
                         </a>
                         <span class="employee-card__name">Christopher Campbell</span>
                         <span class="employee-card__position">Branding/UX design</span>
                     </li>
                     <li class="tabs__item employee-card">
                         <a href="#team-member-3" class="image-link employee-card__photo">
-                            <img src="styles/img/image-link/team-member-3.png" alt="Team Member 3 Image" class="image-link__image">
+                            <!-- <img src="styles/img/image-link/team-member-3.png" alt="Team Member 3 Image" class="image-link__image"> -->
                         </a>
                         <span class="employee-card__name">Michael Fertig</span>
                         <span class="employee-card__position">Developer</span>
@@ -277,31 +306,31 @@
         </div>
         <div class="works__items-container">
             <div class="works__item">
-                <img src="styles/img/works/work-item-1.png" alt="Work Item 1" class="works__img">
+                <!-- <img src="styles/img/works/work-item-1.png" alt="Work Item 1" class="works__img"> -->
                 <div class="works__actions-panel"></div>
             </div>
             <div class="works__item">
-                <img src="styles/img/works/work-item-2.png" alt="Work Item 2" class="works__img">
+                <!-- <img src="styles/img/works/work-item-2.png" alt="Work Item 2" class="works__img"> -->
                 <div class="works__actions-panel"></div>
             </div>
             <div class="works__item">
-                <img src="styles/img/works/work-item-3.png" alt="Work Item 3" class="works__img">
+                <!-- <img src="styles/img/works/work-item-3.png" alt="Work Item 3" class="works__img"> -->
                 <div class="works__actions-panel"></div>
             </div>
             <div class="works__item">
-                <img src="styles/img/works/work-item-4.png" alt="Work Item 4" class="works__img">
+                <!-- <img src="styles/img/works/work-item-4.png" alt="Work Item 4" class="works__img"> -->
                 <div class="works__actions-panel"></div>
             </div>
             <div class="works__item">
-                <img src="styles/img/works/work-item-5.png" alt="Work Item 5" class="works__img">
+                <!-- <img src="styles/img/works/work-item-5.png" alt="Work Item 5" class="works__img"> -->
                 <div class="works__actions-panel"></div>
             </div>
             <div class="works__item">
-                <img src="styles/img/works/work-item-6.png" alt="Work Item 6" class="works__img">
+                <!-- <img src="styles/img/works/work-item-6.png" alt="Work Item 6" class="works__img"> -->
                 <div class="works__actions-panel"></div>
             </div>
             <div class="works__item">
-                <img src="styles/img/works/work-item-7.png" alt="Work Item 7" class="works__img">
+                <!-- <img src="styles/img/works/work-item-7.png" alt="Work Item 7" class="works__img"> -->
                 <div class="works__actions-panel"></div>
             </div>
         </div>
@@ -324,7 +353,7 @@
         <ul class="testimonials-list centered-content">
             <li class="testimonials-list__item">
                 <blockquote class="testimonial">
-                    <img src="styles/img/testimonial/autor-1.png" alt="Matthew Dix Photo" class="testimonial__autor-photo">
+                    <!-- <img src="styles/img/testimonial/autor-1.png" alt="Matthew Dix Photo" class="testimonial__autor-photo"> -->
                     <cite class="testimonial__author">Matthew Dix</cite>
                     <span class="testimonial__autor-position">Graphic Design</span>
                     <p class="testimonial__comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
@@ -332,7 +361,7 @@
             </li>
             <li class="testimonials-list__item">
                 <blockquote class="testimonial">
-                    <img src="styles/img/testimonial/autor-2.png" alt="Nick Karvounis Photo" class="testimonial__autor-photo">
+                    <!-- <img src="styles/img/testimonial/autor-2.png" alt="Nick Karvounis Photo" class="testimonial__autor-photo"> -->
                     <cite class="testimonial__author">Nick Karvounis</cite>
                     <span class="testimonial__autor-position">Graphic Design</span>
                     <p class="testimonial__comment">Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
@@ -340,7 +369,7 @@
             </li>
             <li class="testimonials-list__item">
                 <blockquote class="testimonial">
-                    <img src="styles/img/testimonial/autor-3.png" alt="Jaelynn Castillo Photo" class="testimonial__autor-photo">
+                    <!-- <img src="styles/img/testimonial/autor-3.png" alt="Jaelynn Castillo Photo" class="testimonial__autor-photo"> -->
                     <cite class="testimonial__author">Jaelynn Castillo</cite>
                     <span class="testimonial__autor-position">Graphic Design</span>
                     <p class="testimonial__comment">Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
@@ -348,7 +377,7 @@
             </li>
             <li class="testimonials-list__item">
                 <blockquote class="testimonial">
-                    <img src="styles/img/testimonial/autor-4.png" alt="Mike Petrucci Photo" class="testimonial__autor-photo">
+                    <!-- <img src="styles/img/testimonial/autor-4.png" alt="Mike Petrucci Photo" class="testimonial__autor-photo"> -->
                     <cite class="testimonial__author">Mike Petrucci</cite>
                     <span class="testimonial__autor-position">Graphic Design</span>
                     <p class="testimonial__comment">Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
@@ -361,9 +390,9 @@
             <small class="caption__subtitle">Our Stories</small>
             Latest Blog
         </h2>
-        <div class="blog__articles-container">
+        <div class="blog__articles-container centered-content">
             <div class="article">
-                <img src="styles/img/article/article-1.png" alt="Article 1 Picture" class="article__picture">
+                <!-- <img src="styles/img/article/article-1.png" alt="Article 1 Picture" class="article__picture"> -->
                 <div class="article__publish-date">
                     <span class="article__publish-day">15</span>
                     <span class="article__publish-month">Jan</span>
@@ -377,7 +406,7 @@
                 </div>
             </div>
             <div class="article">
-                <img src="styles/img/article/article-2.png" alt="Article 2 Picture" class="article__picture">
+                <!-- <img src="styles/img/article/article-2.png" alt="Article 2 Picture" class="article__picture"> -->
                 <div class="article__publish-date">
                     <span class="article__publish-day">14</span>
                     <span class="article__publish-month">Jan</span>
@@ -391,7 +420,7 @@
                 </div>
             </div>
             <div class="article">
-                <img src="styles/img/article/article-3.png" alt="Article 3 Picture" class="article__picture">
+                <!-- <img src="styles/img/article/article-3.png" alt="Article 3 Picture" class="article__picture"> -->
                 <div class="article__publish-date">
                     <span class="article__publish-day">12</span>
                     <span class="article__publish-month">Jan</span>
@@ -407,15 +436,17 @@
         </div>
     </section>
     <section class="contact page__contact" id="contact">
-        <a href="#" class="contact__map-link">
-            <h2 class="contact__title">Open Map</h2>
-        </a>
+        <div class="centered-content">
+            <a href="#" class="contact__map-link">
+                <h2 class="contact__title">Open Map</h2>
+            </a>
+        </div>
     </section>
     <footer class="footer page__footer">
         <div class="centered-content">
             <section class="footer__subscribe-section">
-                <a class="logo footer__logo" href=".">
-                    <h2 class="logo__text">MoGo</h2>
+                <a class="footer__logo" href=".">
+                    <h2>MoGo</h2>
                 </a>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <p>
@@ -448,17 +479,17 @@
                 </h2>
                 <div class="footer__blogs-container">
                     <div class="blog-info">
-                        <img src="styles/img/blog-info/blog-info-1.png" alt="Blog Info 1 Picture" class="blog-info__picture">
+                        <!-- <img src="styles/img/blog-info/blog-info-1.png" alt="Blog Info 1 Picture" class="blog-info__picture"> -->
                         <h3 class="blog-info__title">Lorem ipsum dolor sit amet, consectetur adipiscing</h3>
                         <span class="blog-info__publish-date">Jan 9, 2016</span>
                     </div>
                     <div class="blog-info">
-                        <img src="styles/img/blog-info/blog-info-2.png" alt="Blog Info 2 Picture" class="blog-info__picture">
+                        <!-- <img src="styles/img/blog-info/blog-info-2.png" alt="Blog Info 2 Picture" class="blog-info__picture"> -->
                         <h3 class="blog-info__title">Consectetur adipiscing elit, sed do eiusmod tempor</h3>
                         <span class="blog-info__publish-date">Jan 9, 2016</span>
                     </div>
                     <div class="blog-info">
-                        <img src="styles/img/blog-info/blog-info-3.png" alt="Blog Info 3 Picture" class="blog-info__picture">
+                        <!-- <img src="styles/img/blog-info/blog-info-3.png" alt="Blog Info 3 Picture" class="blog-info__picture"> -->
                         <h3 class="blog-info__title">sed do eiusmod tempor incididunt ut labore</h3>
                         <span class="blog-info__publish-date">Jan 9, 2016</span>
                     </div>
@@ -469,7 +500,7 @@
                     Instagram
                 </h2>
                 <div class="footer__instagram-pictures-container">
-                    <a href="#" class="footer__instagram-link"><img src="styles/img/footer/instagram-picture-1.png" alt="Instagram Picture 1" class="footer__instagram-picture"></a>
+                    <!-- <a href="#" class="footer__instagram-link"><img src="styles/img/footer/instagram-picture-1.png" alt="Instagram Picture 1" class="footer__instagram-picture"></a>
                     <a href="#" class="footer__instagram-link"><img src="styles/img/footer/instagram-picture-2.png" alt="Instagram Picture 2" class="footer__instagram-picture"></a>
                     <a href="#" class="footer__instagram-link"><img src="styles/img/footer/instagram-picture-3.png" alt="Instagram Picture 3" class="footer__instagram-picture"></a>
                     <a href="#" class="footer__instagram-link"><img src="styles/img/footer/instagram-picture-4.png" alt="Instagram Picture 4" class="footer__instagram-picture"></a>
@@ -477,7 +508,7 @@
                     <a href="#" class="footer__instagram-link"><img src="styles/img/footer/instagram-picture-6.png" alt="Instagram Picture 6" class="footer__instagram-picture"></a>
                     <a href="#" class="footer__instagram-link"><img src="styles/img/footer/instagram-picture-7.png" alt="Instagram Picture 7" class="footer__instagram-picture"></a>
                     <a href="#" class="footer__instagram-link"><img src="styles/img/footer/instagram-picture-8.png" alt="Instagram Picture 8" class="footer__instagram-picture"></a>
-                    <a href="#" class="footer__instagram-link"><img src="styles/img/footer/instagram-picture-9.png" alt="Instagram Picture 9" class="footer__instagram-picture"></a>
+                    <a href="#" class="footer__instagram-link"><img src="styles/img/footer/instagram-picture-9.png" alt="Instagram Picture 9" class="footer__instagram-picture"></a> -->
                 </div>
                 <a href="#" class="footer__instagram-link">View more photos</a>
             </section>

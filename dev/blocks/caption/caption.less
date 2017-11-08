@@ -1,0 +1,35 @@
+.caption {
+    .montserrat-bold();
+    .font-size-em(30);
+
+    position: relative;
+    line-height: 1;
+    text-transform: uppercase;
+    word-wrap: break-word;
+
+    &::after {
+        .width-rem(60);
+        .height-rem(3);
+
+        content: '';
+        display: block;
+        position: absolute;
+
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+
+        background-color: red;
+    }
+
+    &__subtitle {
+        .kaushan-script-normal();
+
+        display: block;
+        text-transform: none;
+        font-size: 80%;
+        line-height: 1;
+    }
+}

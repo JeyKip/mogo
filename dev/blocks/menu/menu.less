@@ -1,0 +1,111 @@
+.menu {
+    @link-hover-color: #fce38a;
+    @link-active-color: #ffdf77;
+
+    overflow: hidden;
+    transition: all .4s ease;
+
+    &__items {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+        }
+    }
+
+    &__item {
+        padding: 0.5rem 0.75rem;
+        border-top: 1px solid rgba(120, 120, 120, 0.2);
+
+        @media screen and (min-width: 768px) {
+            .padding-top-rem(12);
+            .padding-bottom-rem(12);
+            .padding-left-rem(24);
+            .padding-right-rem(24);
+
+            border-top: none;
+        }
+    }
+
+    &__link {
+        .montserrat-normal();
+        .font-size-em(14);
+
+        position: relative;
+        display: block;
+        text-decoration: none;
+        color: #ffffff;
+        transition: all .2s ease;
+        border-radius: 1em;
+        line-height: 1.5;
+        cursor: pointer;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0px;
+            width: 100%;
+            height: 2px;
+            background-color: @link-hover-color;
+            opacity: 0;
+            transition: all .2s ease-in;
+        }
+
+        &:hover {
+            color: @link-hover-color;
+            transform: translateX(8px);
+
+            @media screen and (min-width: 768px) {
+                transform: none;
+
+                &::after {
+                    opacity: 1;
+                    bottom: -12px;
+                }
+            }
+        }
+
+        &:active {
+            color: @link-active-color;
+
+            &::after {
+                background-color: @link-active-color;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            text-transform: uppercase;
+
+            &_icon {
+                &_magnifying-glass,
+                &_shopping-cart {
+                    background: url('icons.png') no-repeat;
+                    overflow: hidden;
+                    text-indent: -9999px;
+                    text-align: left;
+    
+                    // hide underline for links with icons
+                    &::after {
+                        display: none;
+                    }
+                }
+    
+                &_magnifying-glass {
+                    background-position: -0px -0px;
+                    width: 18px;
+                    height: 18px;
+                }
+    
+                &_shopping-cart {
+                    background-position: -0px -18px;
+                    width: 18px;
+                    height: 15px;
+                }
+            }
+        }
+    }
+}

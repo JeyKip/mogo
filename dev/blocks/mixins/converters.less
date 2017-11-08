@@ -6,6 +6,79 @@
     @{property}: ~"@{remValue}rem";
 }
 
+.px-to-em(@property, @px) {
+    @emValue: @px / @base-em-px;
+    @{property}: ~"@{emValue}em";
+}
+
+.font-size-em(@px) {
+    .px-to-em(font-size, @px);
+}
+
+.width-rem(@px) {
+    .px-to-rem(width, @px);
+}
+
 .max-width-rem(@px) {
     .px-to-rem(max-width, @px);
+}
+
+.height-rem(@px) {
+    .px-to-rem(height, @px);
+}
+
+.margin-top-rem(@px) {
+    .px-to-rem(margin-top, @px);
+}
+
+.margin-right-rem(@px) {
+    .px-to-rem(margin-right, @px);
+}
+
+.margin-bottom-rem(@px) {
+    .px-to-rem(margin-bottom, @px);
+}
+
+.margin-left-rem(@px) {
+    .px-to-rem(margin-left, @px);
+}
+
+.padding-top-rem(@px) {
+    .px-to-rem(padding-top, @px);
+}
+
+.padding-right-rem(@px) {
+    .px-to-rem(padding-right, @px);
+}
+
+.padding-bottom-rem(@px) {
+    .px-to-rem(padding-bottom, @px);
+}
+
+.padding-left-rem(@px) {
+    .px-to-rem(padding-left, @px);
+}
+
+.padding-rem(@px) {
+    .px-to-rem(padding, @px);
+}
+
+.padding-top-em(@px) {
+    .px-to-em(padding-top, @px);
+}
+
+.padding-right-em(@px) {
+    .px-to-em(padding-right, @px);
+}
+
+.padding-bottom-em(@px) {
+    .px-to-em(padding-bottom, @px);
+}
+
+.padding-left-em(@px) {
+    .px-to-em(padding-left, @px);
+}
+
+.padding-em(@px) {
+    .px-to-em(padding, @px);
 }

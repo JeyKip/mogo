@@ -1,0 +1,186 @@
+.header {
+    @menu-color: #95e1d3;
+
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-image: linear-gradient(0deg, rgb(252,227,138) 0%, rgb(243,129,129) 100%);
+
+        @media screen and (min-width: 1024px) {
+            opacity: 0.9;
+        }
+    }
+
+    &__navigation-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+
+        background-color: @menu-color;
+
+        @media screen and (min-width: 768px) {
+            .centered-content();
+
+            background-color: transparent;
+            position: static;
+            top: auto;
+            left: auto;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        @media screen and (max-width: 767px) {
+            .padding-top-rem(8);
+            .padding-bottom-rem(8);
+            .centered-content();
+        }
+
+        @media screen and (min-width: 768px) {
+            .padding-top-rem(12);
+            .padding-bottom-rem(12);
+        }
+    }
+
+    &__logo {
+        .montserrat-bold();
+        .font-size-em(20);
+
+        line-height: 1;
+        text-decoration: none;
+        color: #ffffff;
+
+        @media screen and (min-width: 768px) {
+            .font-size-em(30);
+        }
+    }
+
+    &__menu {
+        width: 100%;
+        max-height: 0px;
+
+        @media screen and (min-width: 768px) {
+            width: auto;
+            max-height: none;
+            margin-left: auto;
+        }
+    }
+
+    &__burger {
+        margin-left: auto;
+        width: 2.5rem;
+        height: 1.5rem;
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__content {
+        .margin-top-rem(40);
+        .max-width-rem(820);
+
+        margin: 0 auto;
+        text-align: center;
+
+        @media screen and (min-width: 768px) {
+            .margin-top-rem(50);
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .margin-top-rem(60);
+        }
+
+        @media screen and (min-width: 1200px) {
+            .margin-top-rem(75);
+        }
+
+        @media screen and (min-width: 1400px) {
+            .margin-top-rem(100);
+        }
+    }
+
+    &__caption {
+        // in original design font-size = 150px and line-height = 140px
+        @line-height-factor: 140.0 / 150;
+        // in original design font-size = 150px and subtitle font-size = 72px
+        @subtitle-font-size-factor: (72.0 / 150) * 100;
+        // in original design font-size = 150px and padding-bottom = 72px
+        @caption-padding-bottom: (72.0 / 150);
+        // in original design font-size = 150px and margin-bottom = 50px
+        @caption-margin-bottom: (50.0 / 150);
+
+        .font-size-em(55);
+        line-height: @line-height-factor;
+        
+        margin: 0;
+        padding: 0;
+        padding-bottom: ~"@{caption-padding-bottom}em";
+        margin-bottom: ~"@{caption-margin-bottom}em";
+
+        & > .caption__subtitle {
+            line-height: 2;
+            font-size: ~"@{subtitle-font-size-factor}%";
+        }
+
+        @media screen and (min-width: 540px) {
+            .font-size-em(70);
+        }
+
+        @media screen and (min-width: 680px) {
+            .font-size-em(90);
+        }
+
+        @media screen and (min-width: 860px) {
+            .font-size-em(100);
+        }
+
+        @media screen and (min-width: 1200px) {
+            .font-size-em(120);
+        }
+
+        @media screen and (min-width: 1400px) {
+            .font-size-em(150);
+        }
+    }
+
+    &__slider {
+        margin: 0;
+        margin-top: 2rem;
+        padding: 0;
+        flex-wrap: wrap;
+
+        & .slider__item {
+            width: 22%;   
+        }
+
+        @media screen and (min-width: 768px) {
+            margin-top: 4rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+            margin-top: 6rem;
+        }
+
+        @media screen and (max-width: 400px) {
+            & .slider__number {
+                display: none;
+            }
+        }
+    }
+}
