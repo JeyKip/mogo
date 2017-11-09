@@ -1,11 +1,23 @@
 .caption {
+    // in original design font-size = 30px and padding-bottom = 41px
+    @caption-padding-bottom: (41.0 / 30);
+
     .montserrat-bold();
-    .font-size-em(30);
+    .font-size-em(20);
+
+    @media screen and (min-width: 768px) {
+        .font-size-em(24);
+    }
+
+    @media screen and (min-width: 1024px) {
+        .font-size-em(30);
+    }
 
     position: relative;
     line-height: 1;
     text-transform: uppercase;
     word-wrap: break-word;
+    padding-bottom: ~"@{caption-padding-bottom}em";
 
     &::after {
         .width-rem(60);
@@ -30,6 +42,6 @@
         display: block;
         text-transform: none;
         font-size: 80%;
-        line-height: 1;
+        line-height: 2;
     }
 }
