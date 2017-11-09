@@ -1,0 +1,45 @@
+.statistic {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &__item {
+        .font-size-em(50);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+
+        color: #ffffff;
+        text-transform: uppercase;
+        text-align: center;
+
+        @media screen and (min-width: 768px) {
+            .font-size-em(65);
+        }
+
+        @media screen and (min-width: 1024px) {
+            .font-size-em(75);
+        }
+    }
+
+    &__amount {
+        // in original design font-size = 72px, margin-bottom = 30px
+        @margin-bottom-factor: 30 / 72;
+        .montserrat-bold();
+
+        font-size: 1em;
+        margin-bottom: ~"@{margin-bottom-factor}em";
+    }
+
+    &__comment {
+        // in original design number's font-size = 72px, comment's font-size = 14px
+        @font-size-factor: 14 / 72;
+
+        .montserrat-normal();
+        font-size: ~"@{font-size-factor}em";
+    }
+}

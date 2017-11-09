@@ -4,6 +4,8 @@
     }
 
     &__caption {
+        text-align: center;
+        
         @media screen and (min-width: 768px) {
             margin-top: 1.5em;
         }
@@ -22,11 +24,13 @@
 
         & > .tab-list__item {
             width: 100%;
+            border-bottom: 1px solid #ffffff;
 
             @media screen and (min-width: 520px) {
                 // in original design there are 3 images with width = 383px, container width = 1200px
                 // 383 / 1200 * 100% = 31.916666666%
                 width: 31.916666666%;
+                border-bottom: none;
             }
         }
     }
@@ -44,6 +48,73 @@
 
             @media screen and (min-width: 1220px) {
                 transform: translate(-10px, -10px);
+            }
+        }
+    }
+
+    &__statistic-container {
+        background-color: #95e1d3;
+    }
+
+    &__statistic-content {
+        .max-width-rem(1200);
+
+        padding: 0;
+        margin: 0 auto;
+
+        @media screen and (min-width: 520px) {
+            .margin-top-rem(30);
+        }
+
+        @media screen and (min-width: 768px) {
+            .margin-top-rem(60);
+        }
+
+        @media screen and (min-width: 1024px) {
+            .margin-top-rem(110);
+        }
+
+        & .statistic__item {
+            // in original design font-size = 72px, padding top and bottom = 88px
+            @padding-tb-factor: 88 / 72;
+            width: 100%;
+            padding: ~"@{padding-tb-factor}em" .5rem;
+            border-bottom: 1px solid #ffffff;
+
+            @media screen and (min-width: 520px) {
+                width: 50%;
+                border: none;
+                border-top: 1px solid #ffffff;
+
+                // right border should be only on the first item in each row if there are two items in the row
+                &:not(:last-child):nth-child(2n + 1) {
+                    border-right: 1px solid #ffffff;
+                }
+            }
+
+            @media screen and (min-width: 1024px) {
+                width: 20%;
+                border: none;
+                border-top: 1px solid #ffffff;
+
+                // right border should be on all items in the row except the last one
+                &:not(:last-child) {
+                    border-right: 1px solid #ffffff;
+                }
+            }
+
+            @media screen and (min-width: 1202px) {
+                // first and every sixes item should have left border
+                &:first-child,
+                &:nth-child(5n + 1) {
+                    border-left: 1px solid #ffffff;
+                }
+
+                // last and every fives item should have right border
+                &:last-child,
+                &:nth-child(5n) {
+                    border-right: 1px solid #ffffff;
+                }
             }
         }
     }
