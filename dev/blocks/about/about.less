@@ -1,20 +1,4 @@
 .about {
-    &__story {
-        text-align: center;
-    }
-
-    &__caption {
-        text-align: center;
-        
-        @media screen and (min-width: 768px) {
-            margin-top: 1.5em;
-        }
-
-        @media screen and (min-width: 1024px) {
-            margin-top: 2.5em;
-        }
-    }
-
     &__tab-list {
         .max-width-rem(1200);
 
@@ -54,13 +38,6 @@
 
     &__statistic-container {
         background-color: #95e1d3;
-    }
-
-    &__statistic-content {
-        .max-width-rem(1200);
-
-        padding: 0;
-        margin: 0 auto;
 
         @media screen and (min-width: 520px) {
             .margin-top-rem(30);
@@ -73,6 +50,13 @@
         @media screen and (min-width: 1024px) {
             .margin-top-rem(110);
         }
+    }
+
+    &__statistic-content {
+        .max-width-rem(1200);
+
+        padding: 0;
+        margin: 0 auto;
 
         & .statistic__item {
             // in original design font-size = 72px, padding top and bottom = 88px
@@ -95,7 +79,10 @@
             @media screen and (min-width: 1024px) {
                 width: 20%;
                 border: none;
-                border-top: 1px solid #ffffff;
+                
+                &:nth-child(n + 6) {
+                    border-top: 1px solid #ffffff;
+                }
 
                 // right border should be on all items in the row except the last one
                 &:not(:last-child) {

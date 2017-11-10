@@ -1,0 +1,47 @@
+.services {
+    &__amazing-services-list {
+        .max-width-rem(1200);
+        
+        padding: 0;
+        margin: 0 auto;
+
+        & .amazing-services-list__item {
+            // in original design there are 3 blocks by 350px width in 1200px width container
+            @width-screen-sm: 350 * 3 / 1200 * 100;
+            @padding-lr-screen-sm: (100 - @width-screen-sm) / 2;
+    
+            @width-screen-m: 350 * 1.5 / 1200 * 100;
+            @padding-lr-screen-m: (100 / 2 - @width-screen-m) / 2;
+    
+            @width-screen-l: 350 / 1200 * 100;
+            @padding-lr-screen-l: (100 / 3 - @width-screen-l) / 2;
+    
+            @media screen and (max-width: 767px) { 
+                width: ~"@{width-screen-sm}%";
+                padding: 1rem ~"@{padding-lr-screen-sm}%";
+                
+                &:nth-child(n + 2) {
+                    border-top: 1px solid #e5e5e5;
+                }
+            }
+    
+            @media screen and (min-width: 768px) and (max-width: 1023px) {
+                width: ~"@{width-screen-m}%";
+                padding: 2.25rem ~"@{padding-lr-screen-m}%";
+
+                &:nth-child(n + 3) {
+                    border-top: 1px solid #e5e5e5;
+                }
+            }
+    
+            @media screen and (min-width: 1024px) {
+                width: ~"@{width-screen-l}%";
+                padding: 3.5rem ~"@{padding-lr-screen-l}%";
+
+                &:nth-child(n + 4) {
+                    border-top: 1px solid #e5e5e5;
+                }
+            }
+        }
+    }
+}
