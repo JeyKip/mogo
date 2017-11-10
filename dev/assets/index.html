@@ -190,12 +190,19 @@
             </li>
         </ul>
     </section>
-    <section class="unique-design">
+    <section class="design">
+        <h2 class="caption centered-content section-caption">
+            <small class="caption__subtitle">For all devices</small>
+            Unique Design
+        </h2>
         <div class="centered-content">
-            <h2 class="caption">
-                <small class="caption__subtitle">For all devices</small>
-                Unique Design
-            </h2>
+            <!-- We need this nesting because we need to calculate paddings according to parent's width
+                and this width mustn't be more than 1200px -->
+            <div class="design__content">
+                <p class="text design__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia suscipit itaque facilis, autem laborum iusto quisquam quasi voluptas id quam.</p>
+                <img src="styles/img/design/bg-phone-big.png" alt="Big Phone Image" class="design__image design__image_style_big-phone">
+                <img src="styles/img/design/bg-phone-small.png" alt="Small Phone Image" class="design__image design__image_style_small-phone">
+            </div>
         </div>
     </section>
     <section class="skills" id="skills">
