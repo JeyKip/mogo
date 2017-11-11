@@ -1,13 +1,13 @@
 @base-rem-px: 16;
 @base-em-px: 16;
 
-.px-to-rem(@property, @px) {
-    @remValue: @px / @base-rem-px;
+.px-to-rem(@property, @px, @basis: @base-rem-px) {
+    @remValue: @px / @basis;
     @{property}: ~"@{remValue}rem";
 }
 
-.px-to-em(@property, @px) {
-    @emValue: @px / @base-em-px;
+.px-to-em(@property, @px, @basis: @base-em-px) {
+    @emValue: @px / @basis;
     @{property}: ~"@{emValue}em";
 }
 
@@ -25,6 +25,10 @@
 
 .height-rem(@px) {
     .px-to-rem(height, @px);
+}
+
+.max-height-rem(@px) {
+    .px-to-rem(max-height, @px);
 }
 
 .margin-top-rem(@px) {
@@ -79,22 +83,22 @@
     .px-to-rem(padding, @px);
 }
 
-.padding-top-em(@px) {
-    .px-to-em(padding-top, @px);
+.padding-top-em(@px, @basis: @base-em-px) {
+    .px-to-em(padding-top, @px, @basis);
 }
 
-.padding-right-em(@px) {
-    .px-to-em(padding-right, @px);
+.padding-right-em(@px, @basis: @base-em-px) {
+    .px-to-em(padding-right, @px, @basis);
 }
 
-.padding-bottom-em(@px) {
-    .px-to-em(padding-bottom, @px);
+.padding-bottom-em(@px, @basis: @base-em-px) {
+    .px-to-em(padding-bottom, @px, @basis);
 }
 
-.padding-left-em(@px) {
-    .px-to-em(padding-left, @px);
+.padding-left-em(@px, @basis: @base-em-px) {
+    .px-to-em(padding-left, @px, @basis);
 }
 
-.padding-em(@px) {
-    .px-to-em(padding, @px);
+.padding-em(@px, @basis: @base-em-px) {
+    .px-to-em(padding, @px, @basis);
 }
