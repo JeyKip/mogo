@@ -1,0 +1,53 @@
+.testimonials-container {
+    @testimonials-list-margin-lr: 110 / 1200;
+
+    position: relative;
+
+    &__prev-testimonial,
+    &__next-testimonial {
+        display: block;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 40px;
+        text-align: center;
+
+        &:hover {
+            background-color: #dedede;
+            opacity: .8;
+
+            & > .arrow {
+                border-color: lighten(@arrow-border-color, 20%);
+            }
+        }
+
+        // we need it for vertical align
+        &::before {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+    }
+
+    &__prev-testimonial {
+        left: 0;
+    }
+
+    &__next-testimonial {
+        right: 0;
+    }
+
+    &__testimonials-list {
+        margin-left: 48px;
+        margin-right: 48px;
+
+        // we need to find min screen width where our percentage margin is equal or bigger than default 48px
+        // x * @testimonials-list-margin-lr > 48
+        // x = ceil(48 / @testimonials-list-margin-lr) = 524
+        @media screen and (min-width: 524px) {
+            margin-left: @testimonials-list-margin-lr * 100%;
+            margin-right: @testimonials-list-margin-lr * 100%;
+        }
+    }
+}

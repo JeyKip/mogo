@@ -1,0 +1,110 @@
+.testimonial {
+    &__image-container {
+        float: left;
+        text-align: center;
+
+        &_size {
+            .create-size(@side-length, @margin-right) {
+                width: @side-length;
+                height: @side-length;
+                line-height: @side-length;
+                margin-right: @margin-right;
+
+                & + .testimonial__content {
+                    margin-left: @side-length + @margin-right;
+                }
+            }
+
+            .create-responsive-size(@side-length, @margin-right) {
+                .create-size(@side-length, @margin-right);
+
+                @media screen and (min-width: 768px) {
+                    .create-size(@side-length * 4 / 3, @margin-right * 2);
+                }
+
+                @media screen and (min-width: 1024px) {
+                    .create-size(@side-length * 2, @margin-right * 3);
+                }
+            }
+
+            &_s {
+                .create-responsive-size(60px, 12px);
+            }
+            &_m {
+                .create-responsive-size(75px, 20px);
+            }
+            &_l {
+                .create-responsive-size(100px, 24px);
+            }
+        }
+
+        &_border {
+            @border-style: 3px solid #95e1d3;
+
+            &_square {
+                // we need to use outline because it does not increase size of element so we do not have problems with line-height
+                // example: element's size = 150px, line-height = 150px, content's size = 144px
+                // as we line-height is bigger than content's size vertical-align does not work correctly
+                outline: @border-style;
+            }
+        }
+    }
+
+    &__content {
+        .font-size-em(14);
+        
+        margin: 0;
+        line-height: 1.5;
+
+        @media screen and (min-width: 768px) {
+            .font-size-em(20);
+        }
+
+        @media screen and (min-width: 1024px) {
+            .font-size-em(24);
+        }
+    }
+
+    &__icon {
+        vertical-align: middle;
+
+        &_no-image {
+            @media screen and (max-width: 1023px) {
+                .icon_style_speech-mid();
+            }
+
+            @media screen and (min-width: 1024px) {
+                .icon_style_speech-large();
+            }
+        }
+    }
+
+    &__comment {
+        .roboto-light-italic();
+        
+        margin: 0;
+        margin-bottom: .5em;
+    }
+
+    &__author {
+        .kaushan-script-normal();
+        .padding-left-rem(68);
+
+        position: relative;
+
+        &::before {
+            .width-rem(60);
+            .height-rem(3);
+
+            content: '';
+            display: inline-block;
+
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+
+            background-color: #f38181;
+        }
+    }
+}

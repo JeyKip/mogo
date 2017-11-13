@@ -1,0 +1,17 @@
+.arrow {
+    display: inline-block;
+
+    width: @arrow-size;
+    height: @arrow-size;
+
+    border-left: @arrow-border-style;
+    border-bottom: @arrow-border-style;
+
+    &_left {
+        transform: rotate(45deg);
+    }
+
+    &_right {
+        transform: rotate(-135deg);
+    }
+}

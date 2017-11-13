@@ -1,8 +1,5 @@
 .accordion-list-item {
     @header-height: 60px;
-    @arrow-size: 20px;
-    @arrow-diagonal-size: sqrt(@arrow-size * @arrow-size + @arrow-size * @arrow-size);
-    @arrow-border-style: 3px solid #cccccc;
 
     &__icon {
         .margin-left-rem(16);
@@ -24,6 +21,7 @@
         height: @header-height;
         line-height: @header-height;
         vertical-align: middle;
+        cursor: pointer;
 
         &::after {
             content: '';
