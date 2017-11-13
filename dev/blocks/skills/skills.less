@@ -5,19 +5,16 @@
     &__main-content {
         .max-width-rem(@content-width);
         .margin-top-rem(24);
-        .margin-bottom-rem(24);
 
         margin-left: auto;
         margin-right: auto;
 
         @media screen and (min-width: 768px) {
             .margin-top-rem(50);
-            .margin-bottom-rem(50);
         }
 
         @media screen and (min-width: 1024px) {
             .margin-top-rem(90);
-            .margin-bottom-rem(90);
         }
     }
 
@@ -59,22 +56,5 @@
         @media screen and (min-width: 1202px) {
             border-right-color: @border-color;
         }
-    }
-
-    &__testimonials {
-        .padding-top-rem(24);
-        .padding-bottom-rem(24);
-
-        @media screen and (min-width: 768px) {
-            .padding-top-rem(48);
-            .padding-bottom-rem(48);
-        }
-
-        @media screen and (min-width: 1024px) {
-            .padding-top-rem(72);
-            .padding-bottom-rem(72);
-        }
-
-        background-color: #f8f8f8;
     }
 }
