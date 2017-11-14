@@ -1,0 +1,135 @@
+.footer {
+    @content-width: 1200;
+    @subscribe-width: 480;
+    @blogs-width: 380;
+    @instagram-width: 270;
+
+    &__main-content {
+        .max-width-rem(1200);
+
+        margin-left: auto;
+        margin-right: auto;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__subscribe, // width: 480px
+    &__blogs, // width: 380px
+    &__instagram { // width: 270px;
+        width: 100%;
+    }
+
+    &__blogs,
+    &__instagram {
+        margin-top: 2rem;
+
+        @media screen and (min-width: 840px) {
+            margin-top: 0;
+        }
+    }
+
+    &__subscribe {
+        @media screen and (min-width: 840px) {
+            width: @subscribe-width / @content-width * 100%;
+        }
+    }
+
+    &__blogs {
+        @media screen and (min-width: 520px) {
+            width: @blogs-width / (@content-width - @subscribe-width) * 100%;
+        }
+
+        @media screen and (min-width: 840px) {
+            width: @blogs-width / @content-width * 100%;
+        }
+    }
+
+    &__instagram {
+        @media screen and (min-width: 520px) {
+            width: @instagram-width / (@content-width - @subscribe-width) * 100%;
+        }
+
+        @media screen and (min-width: 840px) {
+            width: @instagram-width / @content-width * 100%;
+        }
+    }
+
+    &__logo {
+        .montserrat-bold();
+        .font-size-em(30);
+
+        display: block;
+        color: #cccccc;
+        text-decoration: none;
+        margin-bottom: .5em;
+
+        @media screen and (min-width: 840px) {
+            .font-size-em(46);
+        }
+    }
+
+    &__followers-info {
+        margin-top: 2em;
+        padding-bottom: .5em;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    &__follow-us {
+        margin-top: .5em;
+    }
+
+    &__subscribe-form {
+        margin-top: 2em;
+    }
+
+    &__caption {
+        .montserrat-normal();
+        .font-size-em(14);
+
+        margin: 0;
+        margin-bottom: 2em;
+        color: #333333;
+        text-transform: uppercase;
+        line-height: 2.5;
+    }
+
+    &__blogs-container .blog-info:not(:first-child) {
+        margin-top: 2rem;
+    }
+
+    &__instagram-link {
+        .roboto-light-italic();
+        .font-size-em(13);
+
+        display: block;
+        margin-top: 1em;
+        color: #333333;
+        line-height: 1.8;
+        text-decoration: none;
+    }
+
+    &__copyright {
+        .margin-top-rem(24);
+        .max-width-rem(1200);
+        
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        border-top: 1px solid #e5e5e5;
+
+        text-align: center;
+        
+        @media screen and (min-width: 768px) {
+            .margin-top-rem(48);
+        }
+
+        @media screen and (min-width: 1024px) {
+            .margin-top-rem(72);
+        }
+    }
+}

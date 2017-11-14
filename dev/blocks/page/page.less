@@ -58,24 +58,39 @@
     &__section,
     &__logos {
         .margin-top-rem(24);
-        .padding-top-rem(24);
         .padding-bottom-rem(24);
 
         @media screen and (min-width: 768px) {
             .margin-top-rem(50);
-            .padding-top-rem(48);
             .padding-bottom-rem(48);
         }
 
         @media screen and (min-width: 1024px) {
             .margin-top-rem(90);
-            .padding-top-rem(72);
             .padding-bottom-rem(72);
         }
 
-        &_bg_grey {
+        &_bg_gray {
             background-color: #f8f8f8;
         }
+    }
+
+    &__section,
+    &__logos,
+    &__footer {
+        .padding-top-rem(24);
+
+        @media screen and (min-width: 768px) {
+            .padding-top-rem(48);
+        }
+
+        @media screen and (min-width: 1024px) {
+            .padding-top-rem(72);
+        }
+    }
+
+    &__footer {
+        background-color: #f8f8f8;
     }
 
     &__article-list {
