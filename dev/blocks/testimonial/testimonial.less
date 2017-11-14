@@ -86,25 +86,37 @@
         margin-bottom: .5em;
     }
 
-    &__author {
+    &__author-name {
         .kaushan-script-normal();
-        .padding-left-rem(68);
+    }
 
+    &__autor-info {
         position: relative;
-
-        &::before {
+        
+        &_red-line_left::before,
+        &_red-line_bottom::before {
             .width-rem(60);
             .height-rem(3);
 
             content: '';
-            display: inline-block;
-
             position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 0;
-
+            display: inline-block;
             background-color: #f38181;
+        }
+
+        &_red-line_left {
+            .padding-left-rem(68);
+            
+            &::before {
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+            }
+        }
+
+        &_red-line_bottom::before {
+            bottom: 0;
+            left: 0;
         }
     }
 

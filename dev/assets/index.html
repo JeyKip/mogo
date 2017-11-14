@@ -263,25 +263,29 @@
             <div class="testimonials-container">
                 <a href="javascript:void(0);" id="prev-testimonial" class="testimonials-container__prev-testimonial"><i class="arrow arrow_left"></i></a>
                 <ul class="unordered-list testimonials-list testimonials-container__testimonials-list">
-                    <li class="testimonials-list__item testimonials-list__item_active">
+                    <li class="testimonials-list__item testimonials-list__item_active clearfix">
                         <div class="testimonial">
                             <div class="testimonial__image-container testimonial__image-container_size_m testimonial__image-container_border_square">
                                 <i class="icon testimonial__icon testimonial__icon_no-image"></i>
                             </div>
                             <blockquote class="testimonial__content">
                                 <p class="testimonial__comment">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
-                                <cite class="testimonial__author">Jon Doe</cite>
+                                <div class="testimonial__autor-info testimonial__autor-info_red-line_left">
+                                    <cite class="testimonial__author-name">Jon Doe</cite>
+                                </div>
                             </blockquote>
                         </div>
                     </li>
-                    <li class="testimonials-list__item">
+                    <li class="testimonials-list__item clearfix">
                         <div class="testimonial">
                             <div class="testimonial__image-container testimonial__image-container_border_square">
                                 <i class="icon testimonial__icon testimonial__icon_no-image"></i>
                             </div>
                             <blockquote class="testimonial__content">
                                 <p class="testimonial__comment">“Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis doloremque accusamus totam ad nihil hic officiis! Consequuntur vitae deleniti soluta dolorem nam veniam incidunt, dicta, dolores facere quam architecto sequi.”</p>
-                                <cite class="testimonial__author">Jack Sparrow</cite>
+                                <div class="testimonial__autor-info testimonial__autor-info_red-line_left">
+                                    <cite class="testimonial__author-name">Jack Sparrow</cite>
+                                </div>
                             </blockquote>
                         </div>
                     </li>
@@ -454,14 +458,16 @@
             <div class="testimonials-container">
                 <a href="javascript:void(0);" id="prev-testimonial" class="testimonials-container__prev-testimonial"><i class="arrow arrow_left"></i></a>
                 <ul class="unordered-list testimonials-list testimonials-container__testimonials-list">
-                    <li class="testimonials-list__item testimonials-list__item_active">
+                    <li class="testimonials-list__item testimonials-list__item_active clearfix">
                         <div class="testimonial">
-                            <div class="testimonial__image-container testimonial__image-container_size_m">
+                            <div class="testimonial__image-container testimonial__image-container_size_l">
                                 <img src="styles/img/testimonial/autor.png" alt="Joshua Earle Photo" class="testimonial__photo">
                             </div>
                             <blockquote class="testimonial__content">
                                 <p class="testimonial__comment">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
-                                <cite class="testimonial__author">Joshua Earle</cite>
+                                <div class="testimonial__autor-info testimonial__autor-info_red-line_left">
+                                    <cite class="testimonial__author-name">Joshua Earle</cite>
+                                </div>
                             </blockquote>
                         </div>
                     </li>
@@ -470,44 +476,58 @@
             </div>
         </div>
     </div>
-    <section class="testimonials page__testimonials">
-        <div class="centered-content">
-            <h2 class="caption">
-                <small class="caption__subtitle">Happy Clients</small>
-                What People Say
-            </h2>
-        </div>
-        <ul class="testimonials-list centered-content">
-            <li class="testimonials-list__item">
-                <blockquote class="testimonial">
-                    <!-- <img src="styles/img/testimonial/autor-1.png" alt="Matthew Dix Photo" class="testimonial__autor-photo"> -->
-                    <cite class="testimonial__author">Matthew Dix</cite>
-                    <span class="testimonial__autor-position">Graphic Design</span>
-                    <p class="testimonial__comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+    <section class="happy-clients page__testimonials">
+        <h2 class="caption centered-content happy-clients__caption">
+            <small class="caption__subtitle">Happy Clients</small>
+            What People Say
+        </h2>
+        <ul class="unordered-list testimonials-list centered-content happy-clients__testimonials-list">
+            <li class="testimonials-list__item happy-clients__testimonials-list-item testimonials-list__item_active clearfix">
+                <div class="testimonial__image-container testimonial__image-container_size_s">
+                    <img src="styles/img/testimonial/autor-1.png" alt="Matthew Dix Photo" class="testimonial__photo">
+                </div>
+                <blockquote class="testimonial__content happy-clients__testimonial">
+                    <div class="testimonial__autor-info testimonial__autor-info_red-line_bottom">
+                        <cite class="happy-clients__author-name">Matthew Dix</cite>
+                        <span class="happy-clients__autor-position">Graphic Design</span>
+                    </div>
+                    <p class="happy-clients__autor-comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
                 </blockquote>
             </li>
-            <li class="testimonials-list__item">
-                <blockquote class="testimonial">
-                    <!-- <img src="styles/img/testimonial/autor-2.png" alt="Nick Karvounis Photo" class="testimonial__autor-photo"> -->
-                    <cite class="testimonial__author">Nick Karvounis</cite>
-                    <span class="testimonial__autor-position">Graphic Design</span>
-                    <p class="testimonial__comment">Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            <li class="testimonials-list__item happy-clients__testimonials-list-item testimonials-list__item_active clearfix">
+                <div class="testimonial__image-container testimonial__image-container_size_s">
+                    <img src="styles/img/testimonial/autor-2.png" alt="Nick Karvounis Photo" class="testimonial__photo">
+                </div>
+                <blockquote class="testimonial__content happy-clients__testimonial">
+                    <div class="testimonial__autor-info testimonial__autor-info_red-line_bottom">
+                        <cite class="happy-clients__author-name">Nick Karvounis</cite>
+                        <span class="happy-clients__autor-position">Graphic Design</span>
+                    </div>
+                    <p class="happy-clients__autor-comment">Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                 </blockquote>
             </li>
-            <li class="testimonials-list__item">
-                <blockquote class="testimonial">
-                    <!-- <img src="styles/img/testimonial/autor-3.png" alt="Jaelynn Castillo Photo" class="testimonial__autor-photo"> -->
-                    <cite class="testimonial__author">Jaelynn Castillo</cite>
-                    <span class="testimonial__autor-position">Graphic Design</span>
-                    <p class="testimonial__comment">Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            <li class="testimonials-list__item happy-clients__testimonials-list-item testimonials-list__item_active clearfix">
+                <div class="testimonial__image-container testimonial__image-container_size_s">
+                    <img src="styles/img/testimonial/autor-3.png" alt="Jaelynn Castillo Photo" class="testimonial__photo">
+                </div>
+                <blockquote class="testimonial__content happy-clients__testimonial">
+                    <div class="testimonial__autor-info testimonial__autor-info_red-line_bottom">
+                        <cite class="happy-clients__author-name">Jaelynn Castillo</cite>
+                        <span class="happy-clients__autor-position">Graphic Design</span>
+                    </div>
+                    <p class="happy-clients__autor-comment">Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                 </blockquote>
             </li>
-            <li class="testimonials-list__item">
-                <blockquote class="testimonial">
-                    <!-- <img src="styles/img/testimonial/autor-4.png" alt="Mike Petrucci Photo" class="testimonial__autor-photo"> -->
-                    <cite class="testimonial__author">Mike Petrucci</cite>
-                    <span class="testimonial__autor-position">Graphic Design</span>
-                    <p class="testimonial__comment">Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+            <li class="testimonials-list__item happy-clients__testimonials-list-item testimonials-list__item_active clearfix">
+                <div class="testimonial__image-container testimonial__image-container_size_s">
+                    <img src="styles/img/testimonial/autor-4.png" alt="Mike Petrucci Photo" class="testimonial__photo">
+                </div>
+                <blockquote class="testimonial__content happy-clients__testimonial">
+                    <div class="testimonial__autor-info testimonial__autor-info_red-line_bottom">
+                        <cite class="happy-clients__author-name">Mike Petrucci</cite>
+                        <span class="happy-clients__autor-position">Graphic Design</span>
+                    </div>
+                    <p class="happy-clients__autor-comment">Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
                 </blockquote>
             </li>
         </ul>

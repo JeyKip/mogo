@@ -11,8 +11,8 @@
     @{property}: ~"@{emValue}em";
 }
 
-.font-size-em(@px) {
-    .px-to-em(font-size, @px);
+.font-size-em(@px, @basis: @base-em-px) {
+    .px-to-em(font-size, @px, @basis);
 }
 
 .width-rem(@px) {
