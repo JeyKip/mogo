@@ -86,7 +86,7 @@
                 <p class="text">Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
             </div>
             <ul class="tab-list image-tab-list">
-                <li class="tab-list__item">
+                <li class="image-tab-list__item">
                     <a class="image-link image-tab-list__image-link image-tab-list__image-link_onhover_left-top-shift" data-target="#story-1">
                         <img src="styles/img/image-link/story-1.png" alt="Story 1 Image" class="image-link__image">
                         <div class="cover-panel">
@@ -95,7 +95,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="tab-list__item">
+                <li class="image-tab-list__item">
                     <a class="image-link image-tab-list__image-link image-tab-list__image-link_onhover_left-top-shift" data-target="#story-2">
                         <img src="styles/img/image-link/story-2.png" alt="Story 2 Image" class="image-link__image">
                         <div class="cover-panel">
@@ -104,7 +104,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="tab-list__item">
+                <li class="image-tab-list__item">
                     <a class="image-link image-tab-list__image-link image-tab-list__image-link_onhover_left-top-shift" data-target="#story-3">
                         <img src="styles/img/image-link/story-3.png" alt="Story 3 Image" class="image-link__image">
                         <div class="cover-panel">
@@ -290,7 +290,7 @@
             </div>
         </div>
     </div>
-    <section>
+    <section class="page__our-team">
         <h2 class="caption centered-content section-caption">
             <small class="caption__subtitle">Who We Are</small>
             Meet Our Team
@@ -306,7 +306,7 @@
                 <p class="text">Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
             </div>
             <ul class="tab-list image-tab-list">
-                <li class="tab-list__item employee-card">
+                <li class="image-tab-list__item employee-card">
                     <a class="image-link image-tab-list__image-link image-tab-list__image-link_onhover_left-top-shift" data-target="#team-member-1">
                         <img src="styles/img/image-link/team-member-1.png" alt="Team Member 1 Image" class="image-link__image">
                         <div class="cover-panel">
@@ -321,7 +321,7 @@
                     <span class="employee-card__name">Matthew Dix</span>
                     <span class="employee-card__position">Graphic Design</span>
                 </li>
-                <li class="tab-list__item employee-card">
+                <li class="image-tab-list__item employee-card">
                     <a class="image-link image-tab-list__image-link image-tab-list__image-link_onhover_left-top-shift" data-target="#team-member-2">
                         <img src="styles/img/image-link/team-member-2.png" alt="Team Member 2 Image" class="image-link__image">
                         <div class="cover-panel">
@@ -336,7 +336,7 @@
                     <span class="employee-card__name">Christopher Campbell</span>
                     <span class="employee-card__position">Branding/UX design</span>
                 </li>
-                <li class="tab-list__item employee-card">
+                <li class="image-tab-list__item employee-card">
                     <a class="image-link image-tab-list__image-link image-tab-list__image-link_onhover_left-top-shift" data-target="#team-member-3">
                         <img src="styles/img/image-link/team-member-3.png" alt="Team Member 3 Image" class="image-link__image">
                         <div class="cover-panel">
@@ -364,53 +364,95 @@
             <img src="styles/img/work-logo-list/design-trends.png" alt="Design Trends Logo" class="work-logo-list__item">
         </div>
     </div>
-    <section class="works page__works" id="works">
-        <div class="centered-content">
-            <h2 class="caption">
-                <small class="caption__subtitle">What We Do</small>
-                Some of our Work
-            </h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <section class="page__our-works" id="works">
+        <h2 class="caption centered-content section-caption">
+            <small class="caption__subtitle">What We Do</small>
+            Some of our Work
+        </h2>
+        <div class="section-text">
+            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
-        <div class="works__items-container">
-            <div class="works__item">
-                <!-- <img src="styles/img/works/work-item-1.png" alt="Work Item 1" class="works__img"> -->
-                <div class="works__actions-panel"></div>
+        <div class="image-tab-list clearfix">
+            <div class="image-tab-list__item-group clearfix">
+                <div class="image-tab-list__item work-item">
+                    <a class="image-link image-tab-list__image-link">
+                        <img src="styles/img/work-item/work-item-1.png" alt="Work Item 1" class="image-link__image">
+                        <div class="cover-panel">
+                            <i class="icon icon_style_picture-white cover-panel__item"></i>
+                            <span class="work-item__title cover-panel__item">Creativity Designed</span>
+                            <span class="work-item__description cover-panel__item">Lorem ipsum dolor sit</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-tab-list__item work-item">
+                    <a class="image-link image-tab-list__image-link">
+                        <img src="styles/img/work-item/work-item-2.png" alt="Work Item 2" class="image-link__image">
+                        <div class="cover-panel">
+                            <i class="icon icon_style_picture-white cover-panel__item"></i>
+                            <span class="work-item__title cover-panel__item">Creativity Designed</span>
+                            <span class="work-item__description cover-panel__item">Lorem ipsum dolor sit</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-tab-list__item work-item">
+                    <a class="image-link image-tab-list__image-link">
+                        <img src="styles/img/work-item/work-item-3.png" alt="Work Item 3" class="image-link__image">
+                        <div class="cover-panel">
+                            <i class="icon icon_style_picture-white cover-panel__item"></i>
+                            <span class="work-item__title cover-panel__item">Creativity Designed</span>
+                            <span class="work-item__description cover-panel__item">Lorem ipsum dolor sit</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-tab-list__item work-item">
+                    <a class="image-link image-tab-list__image-link">
+                        <img src="styles/img/work-item/work-item-4.png" alt="Work Item 4" class="image-link__image">
+                        <div class="cover-panel">
+                            <i class="icon icon_style_picture-white cover-panel__item"></i>
+                            <span class="work-item__title cover-panel__item">Creativity Designed</span>
+                            <span class="work-item__description cover-panel__item">Lorem ipsum dolor sit</span>
+                        </div>
+                    </a>
+                </div>
             </div>
-            <div class="works__item">
-                <!-- <img src="styles/img/works/work-item-2.png" alt="Work Item 2" class="works__img"> -->
-                <div class="works__actions-panel"></div>
-            </div>
-            <div class="works__item">
-                <!-- <img src="styles/img/works/work-item-3.png" alt="Work Item 3" class="works__img"> -->
-                <div class="works__actions-panel"></div>
-            </div>
-            <div class="works__item">
-                <!-- <img src="styles/img/works/work-item-4.png" alt="Work Item 4" class="works__img"> -->
-                <div class="works__actions-panel"></div>
-            </div>
-            <div class="works__item">
-                <!-- <img src="styles/img/works/work-item-5.png" alt="Work Item 5" class="works__img"> -->
-                <div class="works__actions-panel"></div>
-            </div>
-            <div class="works__item">
-                <!-- <img src="styles/img/works/work-item-6.png" alt="Work Item 6" class="works__img"> -->
-                <div class="works__actions-panel"></div>
-            </div>
-            <div class="works__item">
-                <!-- <img src="styles/img/works/work-item-7.png" alt="Work Item 7" class="works__img"> -->
-                <div class="works__actions-panel"></div>
+            <div class="image-tab-list__item-group clearfix">
+                <div class="image-tab-list__item work-item">
+                    <a class="image-link image-tab-list__image-link">
+                        <img src="styles/img/work-item/work-item-5.png" alt="Work Item 5" class="image-link__image">
+                        <div class="cover-panel">
+                            <i class="icon icon_style_picture-white cover-panel__item"></i>
+                            <span class="work-item__title cover-panel__item">Creativity Designed</span>
+                            <span class="work-item__description cover-panel__item">Lorem ipsum dolor sit</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-tab-list__item work-item">
+                    <a class="image-link image-tab-list__image-link">
+                        <img src="styles/img/work-item/work-item-6.png" alt="Work Item 6" class="image-link__image">
+                        <div class="cover-panel">
+                            <i class="icon icon_style_picture-white cover-panel__item"></i>
+                            <span class="work-item__title cover-panel__item">Creativity Designed</span>
+                            <span class="work-item__description cover-panel__item">Lorem ipsum dolor sit</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="image-tab-list__item work-item">
+                    <a class="image-link image-tab-list__image-link">
+                        <img src="styles/img/work-item/work-item-7.png" alt="Work Item 7" class="image-link__image">
+                        <div class="cover-panel">
+                            <i class="icon icon_style_picture-white cover-panel__item"></i>
+                            <span class="work-item__title cover-panel__item">Creativity Designed</span>
+                            <span class="work-item__description cover-panel__item">Lorem ipsum dolor sit</span>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
-        <ul class="testimonials-list centered-content">
-            <li class="testimonials-list__item">
-                <blockquote class="testimonial">
-                    <p class="testimonial__comment">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
-                    <cite class="testimonial__author">Jon Doe</cite>
-                </blockquote>
-            </li>
-        </ul>
     </section>
+    <div class="page__testimonials">
+        <div class="centered-content">
+        </div>
+    </div>
     <section class="testimonials page__testimonials">
         <div class="centered-content">
             <h2 class="caption">

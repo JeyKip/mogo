@@ -1,22 +1,4 @@
 .image-tab-list {
-    .max-width-rem(1200);
-
-    margin-top: 2rem;
-    margin-left: auto;
-    margin-right: auto;
-
-    & > .tab-list__item {
-        width: 100%;
-        border-bottom: 1px solid #ffffff;
-
-        @media screen and (min-width: 520px) {
-            // in original design there are 3 images with width = 383px, container width = 1200px
-            // 383 / 1200 * 100% = 31.916666666%
-            width: 31.916666666%;
-            border-bottom: none;
-        }
-    }
-
     &__image-link {
         &:hover .cover-panel {
             opacity: 1;
