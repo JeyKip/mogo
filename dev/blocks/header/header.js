@@ -38,6 +38,10 @@
 
         $menu.find('.menu__link').on('click', function(){
             var target = $(this).attr('href') || $(this).data('target');
+            if (!target) {
+                return;
+            }
+            
             var targetTop = $(target).offset().top;
 
             $('html, body').animate({
